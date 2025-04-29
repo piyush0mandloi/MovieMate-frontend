@@ -1,13 +1,43 @@
-# React + Vite
+# 🎬 Movie Recommendation App (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of a full-stack Movie Recommendation Web App built with **React** and **Tailwind CSS**. It allows users to enter a movie name and get personalized recommendations using a content-based filtering system.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎥 Search for any movie to get smart recommendations
+- ⚡ Fast and responsive UI with **Tailwind CSS**
+- 🧠 Smart recommendations powered by a Python backend (Flask API)
+- 💻 Clean, minimal design with animations and dark mode support
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# MovieMate-frontend" 
+![screenshot](./public/screenshot.png) <!-- Add a real screenshot if available -->
+
+## 📁 Project Structure
+
+/ ├── public/ # Static assets ├── src/ # React components │ ├── components/ # Reusable UI like MovieCard │ ├── pages/ # Routes like Home, Recommend │ ├── App.jsx # Main app entry │ └── index.js # Root render ├── tailwind.config.js # Tailwind CSS config └── package.json # Dependencies
+
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 14
+- Backend API running (Flask app listening at `http://localhost:5000` or similar)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/movie-recommender-frontend.git
+cd movie-recommender-frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+🌐 API Dependency
+POST http://localhost:5000/recommend
+Body: { "title": "Avatar" }
