@@ -13,17 +13,16 @@ export default function Recommend() {
     if (!movieName.trim()) return setError("Please enter a movie name.");
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/recommend', {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/recommend`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: movieName, limit: 6 })
       });
-
+  
       const data = await res.json();
       if (!res.ok) {
         setError(data.error || "Something went wrong");
       } else {
-        // Ensure that data.recommendations is always an array
         setRecommendations(Array.isArray(data) ? data : []);
       }
     } catch (e) {
@@ -32,6 +31,7 @@ export default function Recommend() {
       setLoading(false);
     }
   };
+  
 
 
   return (
