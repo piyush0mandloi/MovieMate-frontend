@@ -11,7 +11,10 @@ This is the **frontend** of a full-stack Movie Recommendation Web App built with
 
 ## 📸 Preview
 
-![screenshot](./public/screenshot.png) <!-- Add a real screenshot if available -->
+![image](https://github.com/user-attachments/assets/a9b21b3f-4da9-42c9-99db-5a17a7f7088b)
+
+![image](https://github.com/user-attachments/assets/4405ab59-ba90-41b7-8cd0-0fa276d40aeb)
+
 
 ## 📁 Project Structure
 
